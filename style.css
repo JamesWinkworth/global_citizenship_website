@@ -1,0 +1,525 @@
+:root {
+  --color1: #D6D6D6;
+  --color2: #6F732F;
+  --color3: #3C5233;
+  --color4: #264027;
+  --color5: #0D1F22;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  background-image:
+    url("images/background-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+html.about-html {
+  background-image: url("images/pregnancy-image.jpg");
+}
+
+html.views-html {
+  background-image: url("images/views-background-image.png");
+}
+
+h1 {
+  font-size: 4.5em;
+}
+
+h2 {
+  font-size: 3.1em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+section {
+  background-color: var(--color1);
+  padding: 1em;
+}
+
+.container {
+  margin: auto;
+  max-width: 1100px;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: var(--color5);
+  position: fixed;
+  z-index: 1000000;
+}
+
+nav {
+  padding: 0.2em;
+}
+
+nav ul {
+  justify-content: start;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 3em;
+}
+
+nav ul li:last-child {
+  margin-right: 0em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav ul li a:hover {
+  color: var(--color2);
+}
+
+nav ul li a.active {
+  color: var(--color2);
+  font-weight: 900;
+}
+
+nav ul img {
+  width: 40px;
+  margin-right: 2em;
+}
+
+/* Header */
+.header {
+  height: 450px;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.header .container {
+  text-align: center;
+  min-width: 400px;
+  width: 50%;
+  background-color: var(--color1);
+  padding: 2em;
+}
+
+.header p {
+  font-size: 1.3em;
+}
+
+/* Quotes */
+.quotes ul.quote-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.quotes ul li.quote {
+  background-image: linear-gradient(to top right, var(--color5), var(--color4), var(--color3), var(--color2));
+  padding: 1em;
+  text-align: center;
+  border-radius: 1em;
+  box-shadow: 0.2em 0.2em 0.5em;
+  transition: transform 0.1s linear;
+}
+
+.quotes ul li.quote:hover {
+  transform: translateY(-1em);
+}
+
+.quotes ul li.quote img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: 0 0;
+  border-radius: 50%;
+}
+
+.quotes ul li.quote p {
+  color: white;
+}
+
+.quotes ul li.quote4 img {
+  object-position: 60% 0;
+}
+
+.quotes ul li.quote1 {
+  grid-column-start: 1;
+}
+
+.quotes ul li.quote2 {
+  grid-column-start: 2;
+}
+
+.quotes ul li.quote3 {
+  grid-column-start: 3;
+}
+
+.quotes ul li.quote4 {
+  grid-column-start: 4;
+}
+
+/* About */
+.about {
+  background-color: white;
+  padding: 2em;
+}
+
+.about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2em;
+}
+
+.about .container div {
+  max-width: 50%;
+}
+
+.about p,
+.about li {
+  margin: 0.5em 0;
+  font-size: 1.5em;
+}
+
+a.read-more {
+  display: inline-block;
+  padding: 0.8em;
+  text-decoration: none;
+  font-weight: 900;
+  color: white;
+  background-color: var(--color5);
+  border: 2px solid var(--color5);
+  border-radius: 2em;
+  transition: color 0.3s linear, background-color 0.3s linear;
+}
+
+a.read-more:hover {
+  color: var(--color5);
+  background-color: transparent;
+}
+
+.about img {
+  width: 50%;
+}
+
+/* Video */
+.video {
+  text-align: center;
+}
+
+.video h2 {
+  margin: 0.5em 0;
+}
+
+.video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  color: white;
+  background-color: var(--color5);
+  padding: 1em;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer ul {
+  flex-direction: column;
+  min-width: 110px;
+  overflow-wrap: break-word;
+}
+
+.footer ul:first-child {
+  margin-right: 1em;
+}
+
+.footer ul li {
+  margin-bottom: 0.5em;
+}
+
+.footer ul li:last-child {
+  margin-bottom: 0;
+}
+
+.footer ul li a {
+  color: white;
+}
+
+/* About page */
+.overview p {
+  font-size: 1.4em;
+}
+
+.procedure .container {
+  flex-direction: column;
+}
+
+.procedure .container .top-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  gap: 1.2em;
+}
+
+.procedure .container>p {
+  width: 100%;
+}
+
+.procedure li,
+.overview li {
+  list-style-type: disc;
+  width: 100%;
+}
+
+.procedure h3 {
+  width: 100%;
+}
+
+/* Views page */
+.comparison .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+.comparison .container div {
+  border: 2px solid black;
+  background-color: white;
+  width: 100%;
+}
+
+.comparison .container .table-header {
+  border: none;
+  color: white;
+  background-color: var(--color5);
+  padding: 1em;
+}
+
+.comparison .container .for,
+.comparison .container .against {
+  min-height: 500px;
+}
+
+.comparison div h3 {
+  font-size: 2em;
+}
+
+.comparison div ul.table-data {
+  flex-direction: column;
+  padding: 1em;
+}
+
+.comparison div ul li {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  list-style-type: disclosure-closed;
+  list-style-position: inside;
+}
+
+.comparison div ul li:last-child {
+  margin-bottom: 0;
+}
+
+.comparison div ul:last-child {
+  margin-bottom: 0;
+}
+
+.religious .container {
+  flex-direction: column;
+}
+
+.religious .container .religious-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.religious .container .religious-container img {
+  width: auto;
+  max-height: 230px;
+}
+
+.religious h2,
+.religious h3,
+.religious p {
+  width: 100%;
+}
+
+.religious h3:first-child {
+  margin-top: 0.5em;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .about p,
+  .about li {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .about .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about div {
+    margin-bottom: 1em;
+  }
+
+  .about .container div {
+    max-width: 100%;
+  }
+
+  .about img {
+    width: 90%;
+  }
+
+  .procedure .container .top-part {
+    flex-direction: column;
+  }
+
+  .law img {
+    order: 2;
+  }
+
+  .views-link img {
+    margin-bottom: 1em;
+  }
+
+  .comparison .container {
+    flex-direction: column;
+  }
+
+  .comparison .container .for,
+  .comparison .container .against {
+    min-height: 0;
+  }
+
+  .comparison .container div:first-child {
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+
+  .religious .container .religious-container {
+    flex-direction: column;
+  }
+
+  .religious .container .religious-container img {
+    order: 2 !important;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .quotes ul.quote-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .quotes ul li.quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quotes ul li.quote img {
+    min-width: 100px;
+  }
+
+  .quotes ul li.quote1 {
+    grid-row-start: 1;
+  }
+
+  .quotes ul li.quote2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  .quotes ul li.quote3 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+
+  .quotes ul li.quote4 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  nav ul img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 3.5em;
+  }
+
+  .header .container {
+    min-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  nav ul li {
+    margin-right: 2em;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  nav ul li a {
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width: 305px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  .header .container {
+    min-width: 250px;
+  }
+
+  .quotes ul li.quote img {
+    width: 50px;
+    height: 50px;
+    min-width: 50px
+  }
+}
